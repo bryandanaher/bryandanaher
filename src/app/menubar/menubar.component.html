@@ -1,13 +1,32 @@
 <div class="menubar">
     <div class="title-container">
-        <div class="title-background">
-            <h1>I'M BRYAN.</h1>
-            <h1>HELLO.</h1>
+        <div [class]="bioBackground">
+            <div *ngIf="!bioExpanded">
+                <h1>I'M BRYAN.</h1>
+                <h1>HELLO.</h1>
+            </div>
+            <div *ngIf="bioExpanded">
+                <div class="sidebar-container flex-column">
+                    <img src="/assets/images/bryan_portrait.png" alt="My Face">
+                    <h2>Bryan Danaher</h2>
+                    <p>I'm a software engineer, web designer, artist, and active producer of messy Unity scripts.</p>
+                    <h2>Contact</h2>
+                    <a href="https://www.linkedin.com/in/bryan-danaher-42426235/">LinkedIn</a>
+                    <a href="mailto:bryandanaher@gmail.com">bryandanaher@gmail.com</a>
+                </div>
+            </div>
+
+            <div [class]="iconContainer" (click)="toggleExpandBio()">
+                <fa-icon [icon]="faArrow"></fa-icon>
+            </div>
         </div>
     </div>
     <div class="title-container">
         <div class="title-background">
             <h1>PROJECTS</h1>
+            <div class="icon-container">
+                <fa-icon [icon]="faArrow"></fa-icon>
+            </div>
         </div>
     </div>
 </div>

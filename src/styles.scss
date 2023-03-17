@@ -22,17 +22,11 @@ html, body {
 }
 
 .flex-container {
-    display: flex;
+    display: flex !important;
 }
 .flex-column {
     display: flex;
     flex-direction: column;
-}
-.sidebar-container {
-    padding: 1rem;
-    height: 100vh;
-    background-color: $dark;
-    color: $light;
 }
 .width-full {
     min-width: 100%;
@@ -41,3 +35,6 @@ html, body {
     min-height: 100%;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

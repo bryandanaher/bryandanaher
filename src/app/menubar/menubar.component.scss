@@ -25,12 +25,66 @@
 .title-container:hover h1 {
     color: $dark;
 }
+.title-container:hover .icon-container {
+    display: flex;
+}
 h1 {
     font-size: 3rem;
     margin: 0 0.5rem;
 }
 .title-background {
+    position: relative;
     border-radius: 5px;
     height: 100px;
     transition: height 0.5s, background-color 0.5s, transform 0.5s;
+}
+.expanded {
+    background-color: $light;
+    height: 100% !important;
+}
+.expanded h1 {
+    // display: none;
+    color: $dark;
+}
+.icon-container {
+    display: none;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    position: absolute;
+    bottom: 5px;
+}
+.icon-container:hover fa-icon {
+    color: $main;
+}
+fa-icon {
+    color: $dark;
+    font-size: 1.5rem;
+}
+
+
+.sidebar-container {
+    color: $dark; 
+    padding: 1rem;
+    // height: 100vh;
+    width: 16.5rem;
+    // background-color: $dark;
+    // color: $light;
+    // overflow-y: scroll;
+}
+.sidebar-container img {
+    border-radius: 50px;
+}
+// h1 {
+//     margin: 0.5rem 0;
+// }
+.sidebar-container h2 {
+    margin-bottom: 0.2rem;
+}
+.sidebar-container p {
+    margin: 0;
+}
+.sidebar-container a {
+    margin: 0.2rem 0;
 }
