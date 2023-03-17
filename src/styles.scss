@@ -1,0 +1,43 @@
+$white: white;
+$light: #f8faff;
+$light-accent: #5f6989;
+$main: #3077ad;
+$dark-accent: #0b122f;
+$dark: #101011;
+
+@font-face {
+    font-family: montserrat;
+    src: url(assets/font/Montserrat-VariableFont_wght.ttf);
+}
+
+* {
+    font-family: "montserrat", "helvetica", sans-serif;
+}
+
+html, body {
+    background-color: $dark;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.flex-container {
+    display: flex;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-container {
+    padding: 1rem;
+    height: 100vh;
+    background-color: $dark;
+    color: $light;
+}
+.width-full {
+    min-width: 100%;
+}
+.height-full {
+    min-height: 100%;
+}
+

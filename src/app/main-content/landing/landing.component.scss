@@ -1,0 +1,95 @@
+@import "src/styles.scss";
+
+$size: 2px;
+
+.base-container {
+  position: relative;
+}
+.base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transform-origin: center;
+  display: flex;
+  z-index: 0;
+}
+.animation-none {
+  animation: none !important;
+}
+
+.circ {
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: $light;
+  box-shadow: 3px 3px 10px #001aff;
+  margin: auto;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+.base-container .base:nth-child(1) {
+  background-color: $dark;
+  transform: scale(1.15);    
+}
+
+@for $i from 1 through 4 {
+  .base:nth-child(#{$i}) {
+    transform: rotate(30deg/$i);
+    animation: turn-#{$i} 5s ease-in-out infinite alternate;
+    animation-duration: 4s * $i;
+    @keyframes turn-#{$i} {
+      0% { transform: rotate(0); }
+      100% { transform: rotate($i * (1 / 3)); }
+    }
+  }
+}
+
+// .base .circ {
+//   &:nth-child(1) {
+//     transform: translate($d, 0);
+//   }
+//   &:nth-child(2) {
+//     transform: translate(0, $d);
+//   }
+//   &:nth-child(3) {
+//     transform: translate($d * -1, 0);
+//   }
+//   &:nth-child(4) {
+//     transform: translate(0, $d * -1);
+//   }
+//   &:nth-child(5) {
+//     transform: translate($a, $a);
+//   }
+//   &:nth-child(6) {
+//     transform: translate($a, -$a);
+//   }
+//   &:nth-child(7) {
+//     transform: translate(-$a, $a);
+//   }
+//   &:nth-child(8) {
+//     transform: translate(-$a, -$a);
+//   }
+// }
+// .base:nth-child(2) {
+//   transform: rotate(.1turn);
+// }
+
+// @for $i from 2 through 8 {
+//   .base:nth-child(#{$i}) {
+//     transform: rotate($i * .1turn);
+//     animation: turn-#{$i} 6s ease-in-out infinite alternate;
+//     animation-duration: 1.5s * $i;
+//     @keyframes turn-#{$i} {
+//       to { transform: rotate($i * (1 / 8) * 1urn); }
+//       from { transform: rotate(0); }
+//     }
+
+//     .circ {
+//       background: rgba(#000, .05);
+//     }
+//   }
+// }

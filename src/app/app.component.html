@@ -1,0 +1,5 @@
+<div class="secret-button" (click)="emitToggleAnimationEventSubject()"></div>
+<app-main-content 
+    [toggleAnimationObservable]="toggleAnimationEventSubject.asObservable()">
+</app-main-content>
+<app-menubar></app-menubar>

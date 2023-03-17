@@ -1,0 +1,11 @@
+<div class="flex-container width-full base-container"  (click)="toggleAnimations()">
+    <div *ngFor="let i of [1,2,3,4]" 
+        [class]="baseClass">
+        <!-- [style]="transformOriginStyle"  -->
+        <!-- (click)="updateTransformOrigin()"> -->
+        <div *ngFor="let positionString of coordinatesArray"
+            class="circ" 
+            [style]="positionString">
+        </div>
+    </div>
+</div>
