@@ -2,8 +2,7 @@
     <div class="title-container">
         <div [class]="bioBackground">
             <div *ngIf="!bioExpanded">
-                <h1>I'M BRYAN.</h1>
-                <h1>HELLO.</h1>
+                <h1>ABOUT ME</h1>
             </div>
             <div *ngIf="bioExpanded">
                 <div class="sidebar-container flex-column">
@@ -15,17 +14,33 @@
                     <a href="mailto:bryandanaher@gmail.com">bryandanaher@gmail.com</a>
                 </div>
             </div>
-
             <div [class]="iconContainer" (click)="toggleExpandBio()">
-                <fa-icon [icon]="faArrow"></fa-icon>
+                <fa-icon [icon]="faBioArrow"></fa-icon>
             </div>
         </div>
     </div>
     <div class="title-container">
-        <div class="title-background">
-            <h1>PROJECTS</h1>
-            <div class="icon-container">
-                <fa-icon [icon]="faArrow"></fa-icon>
+        <div [class]="projectsBackground">
+            <div *ngIf="!projectsExpanded">
+                <h1>PROJECTS</h1>
+            </div>
+            <div *ngIf="projectsExpanded">
+                <div class="sidebar-container centered-column">
+                    <h1>Projects</h1>
+                    <h2>Angular</h2>
+                    <a href="https://jacksoncountyexecutive.com">Lake for Jackson County Executive</a>
+                    <h2>Reactjs</h2>
+                    <a href="http://qualitysticks.org">Quality Sticks</a>
+                    <h2>Other</h2>
+                    <a href="http://billdanaher.club">Fathers Day</a>
+                    <a href="https://www.reddit.com/r/Hyperion/comments/nz2hxz/i_made_hyperion_maps_equus_and_aquila/">Here's
+                        a map I made</a>
+                    <h2>Github</h2>
+                    <a href="https://github.com/bryandanaher?tab=repositories">github.com/bryandanaher</a>
+                </div>
+            </div>
+            <div [class]="iconContainer" (click)="toggleExpandProjects()">
+                <fa-icon [icon]="faProjectsArrow"></fa-icon>
             </div>
         </div>
     </div>
