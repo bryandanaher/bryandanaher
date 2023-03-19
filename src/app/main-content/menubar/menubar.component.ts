@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +7,8 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./menubar.component.scss']
 })
 export class MenubarComponent implements OnInit {
+  @Output() lfeEvent = new EventEmitter();
+
   faBioArrow = faArrowDown;
   faProjectsArrow = faArrowDown;
 
@@ -20,6 +22,10 @@ export class MenubarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  emitLakeForExecutiveEvent(): void {
+    this.lfeEvent.emit();
   }
 
   toggleExpandProjects(): void {

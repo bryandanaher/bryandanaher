@@ -13,6 +13,9 @@ export class MainContentComponent implements OnInit {
   private eventSubscription!: Subscription;
   @Input() toggleAnimationObservable!: Observable<void>;
 
+  centerExpanded: boolean = false;
+  cardContent: string = "HELLO.";
+
   constructor() { }
 
   ngOnInit(): void {
@@ -22,5 +25,16 @@ export class MainContentComponent implements OnInit {
 
   toggleAnimations(): void {
     this.landingComponent.toggleAnimations();
+  }
+
+  toggleContent(content: string): void {
+    if(!this.centerExpanded) {
+      //expand center content by switching the css
+    }
+    switch(content) {
+      case 'lakeForExecutive':
+        this.cardContent = "WOWOWOWEEEE!";
+        break;
+    }
   }
 }

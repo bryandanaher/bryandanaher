@@ -1,6 +1,8 @@
 <div class="content-container">
     <app-landing></app-landing>
-    <!-- <div class="title-container">
-        <h1>HELLO.</h1>
-    </div> -->
+    <app-menubar (lfeEvent)="toggleContent('lakeForExecutive')"></app-menubar>
+
+    <div class="center-container">
+        <h1>{{cardContent}}</h1>
+    </div>
 </div>
