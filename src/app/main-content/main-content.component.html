@@ -1,8 +1,18 @@
 <div class="content-container">
     <app-landing></app-landing>
-    <app-menubar (lfeEvent)="toggleContent('lakeForExecutive')"></app-menubar>
+    <app-menubar (lfeEvent)="toggleContent('lakeForExecutive')"
+        (fathersDayEvent)="toggleContent('billBoat')"
+        (qualitySticksEvent)="toggleContent('qualitySticks')"
+        (mapEvent)="toggleContent('hyperionMap')"></app-menubar>
 
-    <div class="center-container">
-        <h1>{{cardContent}}</h1>
+    <div [class]="expandableContainer">
+        <div class="center-content">
+            <div class="close-icon-container" (click)="closeCenterContainer()">
+                <fa-icon [icon]="faTimes"></fa-icon>
+            </div>            
+            <app-page-info [cardContent]="cardContent"
+                [paragraphs]="paragraphs"
+                [linkToPage]="linkToPage"></app-page-info>
+        </div>
     </div>
 </div>

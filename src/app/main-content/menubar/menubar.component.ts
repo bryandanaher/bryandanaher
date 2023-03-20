@@ -8,6 +8,9 @@ import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 })
 export class MenubarComponent implements OnInit {
   @Output() lfeEvent = new EventEmitter();
+  @Output() fathersDayEvent = new EventEmitter();
+  @Output() qualitySticksEvent = new EventEmitter();
+  @Output() mapEvent = new EventEmitter();
 
   faBioArrow = faArrowDown;
   faProjectsArrow = faArrowDown;
@@ -17,7 +20,8 @@ export class MenubarComponent implements OnInit {
 
   bioBackground: string = "title-background";
   projectsBackground: string = "title-background";
-  iconContainer: string = "icon-container";
+  projectIconContainer: string = "icon-container height-full";
+  bioIconContainer: string = "icon-container height-full";
 
   constructor() { }
 
@@ -27,16 +31,25 @@ export class MenubarComponent implements OnInit {
   emitLakeForExecutiveEvent(): void {
     this.lfeEvent.emit();
   }
+  emitFathersDayEvent(): void {
+    this.fathersDayEvent.emit();
+  }
+  emitQualitySticksEvent(): void {
+    this.qualitySticksEvent.emit();
+  }
+  emitMapEvent(): void {
+    this.mapEvent.emit();
+  }
 
   toggleExpandProjects(): void {
     if(this.projectsBackground === "title-background") {
       this.projectsBackground = "title-background expanded";
-      this.iconContainer = "icon-container flex-container";
+      this.projectIconContainer = "icon-container flex-container";
       this.faProjectsArrow = faArrowUp;
       this.projectsExpanded = true;
     } else {
       this.projectsBackground = "title-background";
-      this.iconContainer = "icon-container";
+      this.projectIconContainer = "icon-container height-full";
       this.faProjectsArrow = faArrowDown;    
       this.projectsExpanded = false;
     }
@@ -45,12 +58,12 @@ export class MenubarComponent implements OnInit {
   toggleExpandBio(): void {
     if(this.bioBackground === "title-background") {
       this.bioBackground = "title-background expanded";
-      this.iconContainer = "icon-container flex-container";
+      this.bioIconContainer = "icon-container flex-container";
       this.faBioArrow = faArrowUp;
       this.bioExpanded = true;
     } else {
       this.bioBackground = "title-background";
-      this.iconContainer = "icon-container";
+      this.bioIconContainer = "icon-container  height-full";
       this.faBioArrow = faArrowDown;    
       this.bioExpanded = false;
     }

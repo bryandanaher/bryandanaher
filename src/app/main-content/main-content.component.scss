@@ -9,16 +9,51 @@ app-landing {
     width: 100%;
     height: 100%;
 }
-.center-container {
+.expandable-container {
     position: absolute;
     left: 20rem;
     top: 1rem;
-    display: flex;
-    justify-content: center;
     z-index: 101;
     height: calc(100vh - 2rem);
-    min-width: 400px;
-    width: calc(100vw - 40rem);
+    width: 0;
     border-radius: 5px;
     background-color: $white;
+    transition: width 0.5s;
+    background-color: $white;
+}
+.expanded {
+    width: calc(100vw - 40rem) !important;
+    // min-width: 400px;
+}
+.expanded .center-content {
+    display: flex;
+}
+.center-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $white;
+    border-radius: 5px;
+    display: none;
+    justify-content: center;
+}
+.close-icon-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: fit-content;
+}
+.close-icon-container fa-icon {
+    font-size: 1.5rem;
+}
+.close-icon-container fa-icon:hover {
+    color: $main;
+    font-size: 1.6rem;
+}
+.close-icon-container:hover {
+    top: 0.9rem;
+    right: 0.9rem;
+}
+app-page-info {
+    height: 100%;
 }

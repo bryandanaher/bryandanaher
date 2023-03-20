@@ -8,6 +8,7 @@ import { PracticeCssComponent } from './practice-css/practice-css.component';
 import { MenubarComponent } from './main-content/menubar/menubar.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PageInfoComponent } from './main-content/page-info/page-info.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MainContentComponent,
     LandingComponent,
     PracticeCssComponent,
-    MenubarComponent
+    MenubarComponent,
+    PageInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -18,13 +18,20 @@
     margin: 1rem;
     width: 18.5rem;
 }
-.title-container:hover .title-background {
+// .title-container:hover .title-background {
+//     background-color: $light;
+//     height: 150px;
+// }
+.title-background:hover {
     background-color: $light;
     height: 150px;
 }
-.title-container:hover h1 {
+.title-background:hover h1 {
     color: $dark;
 }
+// .title-container:hover h1 {
+//     color: $dark;
+// }
 .title-container:hover .icon-container {
     display: flex;
 }
@@ -77,9 +84,23 @@ fa-icon {
 .sidebar-container p {
     margin: 0;
 }
-.centered-column {
+.sidebar-container button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    color: $main;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin: 5px 0;
+}
+.sidebar-container button:hover {
+    color: $dark-accent;
+    font-weight: bold;
+}
+.left-align-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
 }

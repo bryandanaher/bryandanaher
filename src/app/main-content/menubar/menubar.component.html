@@ -1,27 +1,31 @@
 <div class="menubar">
     <div class="title-container">
         <div [class]="projectsBackground">
-
             <div *ngIf="!projectsExpanded">
                 <h1>PROJECTS</h1>
             </div>
             <div *ngIf="projectsExpanded">
-                <div class="sidebar-container centered-column">
+                <div class="sidebar-container left-align-column">
                     <h1>PROJECTS</h1>
                     <h2>Angular</h2>
-                    <a href="https://jacksoncountyexecutive.com">Lake for Jackson County Executive</a>
-                    <button (click)="emitLakeForExecutiveEvent()"> LFE Event </button>
-                    <a href="http://billdanaher.club">Fathers Day</a>
+                    <!-- <a href="https://jacksoncountyexecutive.com">Lake for Jackson County Executive</a> -->
+                    <button (click)="emitLakeForExecutiveEvent()">Lake for Jackson County Executive</button>
+                    <!-- <a href="http://billdanaher.club">Fathers Day</a> -->
+                    <button (click)="emitFathersDayEvent()">Fathers Day Page</button>
+
                     <h2>Reactjs</h2>
-                    <a href="http://qualitysticks.org">Quality Sticks</a>
+                    <!-- <a href="http://qualitysticks.org">Quality Sticks</a> -->
+                    <button (click)="emitQualitySticksEvent()">Quality Sticks</button>
+
                     <h2>Art</h2>
-                    <a href="https://www.reddit.com/r/Hyperion/comments/nz2hxz/i_made_hyperion_maps_equus_and_aquila/">Map
-                        of Hyperion</a>
+                    <!-- <a href="https://www.reddit.com/r/Hyperion/comments/nz2hxz/i_made_hyperion_maps_equus_and_aquila/">Map of Hyperion</a> -->
+                    <button (click)="emitMapEvent()">Hyperion Map</button>
+
                     <h2>Github</h2>
                     <a href="https://github.com/bryandanaher?tab=repositories">github.com/bryandanaher</a>
                 </div>
             </div>
-            <div [class]="iconContainer" (click)="toggleExpandProjects()">
+            <div [class]="projectIconContainer" (click)="toggleExpandProjects()">
                 <fa-icon [icon]="faProjectsArrow"></fa-icon>
             </div>
         </div>
@@ -41,10 +45,9 @@
                     <a href="mailto:bryandanaher@gmail.com">bryandanaher@gmail.com</a>
                 </div>
             </div>
-            <div [class]="iconContainer" (click)="toggleExpandBio()">
+            <div [class]="bioIconContainer" (click)="toggleExpandBio()">
                 <fa-icon [icon]="faBioArrow"></fa-icon>
             </div>
         </div>
-
     </div>
 </div>
