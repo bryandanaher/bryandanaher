@@ -42,3 +42,14 @@ a {
 a:hover {
     font-weight: bold;
 }
+.link-inline {
+    display: flex; 
+    flex-direction: row;
+}
+.link-inline a {
+    margin-right: 0.5rem;
+}
+.link-inline fa-icon {
+    font-size: 1rem;
+    color: $main;
+}

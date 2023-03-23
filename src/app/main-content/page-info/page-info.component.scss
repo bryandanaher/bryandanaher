@@ -1,12 +1,71 @@
 @import "src/styles.scss";
 
-.page-info {
-    background-color: $light-accent;
+.page-info-bg-container {
+    background-color: $light;
     border-radius: 5px;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
+}
+.page-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10%;
 }
 h1 {
     margin: 0;
-    padding: 0.5rem;
+    padding: 1rem 0;
+    color: $dark;
+    text-align: center;
+}
+.image-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-link {
+    width: fit-content;
+    cursor: pointer;
+}
+img {
+    box-shadow: 0 3px 5px #10101148;
+    max-height: 300px;
+    width: fit-content;
+    max-width: 100%;
+}
+.bottom-link {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 2rem 0;
+}
+.link-inline a {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.image-modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.show-modal {
+    display: flex;
+}
+.modal-background {
+    background-color: #00000038;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.modal-image-container {
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+}
+.modal-image-container img {
+    max-height: 100% !important;
+    width: fit-content;
 }

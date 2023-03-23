@@ -3,7 +3,8 @@
     <app-menubar (lfeEvent)="toggleContent('lakeForExecutive')"
         (fathersDayEvent)="toggleContent('billBoat')"
         (qualitySticksEvent)="toggleContent('qualitySticks')"
-        (mapEvent)="toggleContent('hyperionMap')"></app-menubar>
+        (mapEvent)="toggleContent('hyperionMap')"
+        (unityInventoryEvent)="toggleContent('unityInventory')"></app-menubar>
 
     <div [class]="expandableContainer">
         <div class="center-content">
@@ -11,6 +12,8 @@
                 <fa-icon [icon]="faTimes"></fa-icon>
             </div>            
             <app-page-info [cardContent]="cardContent"
+                [imageName]="imageName"
+                [largeImageName]="largeImageName"
                 [paragraphs]="paragraphs"
                 [linkToPage]="linkToPage"></app-page-info>
         </div>

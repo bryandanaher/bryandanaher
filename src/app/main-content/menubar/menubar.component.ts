@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { faArrowDown, faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowUp, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menubar',
@@ -11,9 +11,11 @@ export class MenubarComponent implements OnInit {
   @Output() fathersDayEvent = new EventEmitter();
   @Output() qualitySticksEvent = new EventEmitter();
   @Output() mapEvent = new EventEmitter();
+  @Output() unityInventoryEvent = new EventEmitter();
 
   faBioArrow = faArrowDown;
   faProjectsArrow = faArrowDown;
+  faExternalLinkAlt = faExternalLinkAlt;
 
   bioExpanded: boolean = false;
   projectsExpanded: boolean = false;
@@ -39,6 +41,9 @@ export class MenubarComponent implements OnInit {
   }
   emitMapEvent(): void {
     this.mapEvent.emit();
+  }
+  emitUnityInventoryEvent(): void {
+    this.unityInventoryEvent.emit();
   }
 
   toggleExpandProjects(): void {

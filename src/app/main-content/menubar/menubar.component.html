@@ -8,21 +8,24 @@
                 <div class="sidebar-container left-align-column">
                     <h1>PROJECTS</h1>
                     <h2>Angular</h2>
-                    <!-- <a href="https://jacksoncountyexecutive.com">Lake for Jackson County Executive</a> -->
                     <button (click)="emitLakeForExecutiveEvent()">Lake for Jackson County Executive</button>
-                    <!-- <a href="http://billdanaher.club">Fathers Day</a> -->
                     <button (click)="emitFathersDayEvent()">Fathers Day Page</button>
 
                     <h2>Reactjs</h2>
-                    <!-- <a href="http://qualitysticks.org">Quality Sticks</a> -->
                     <button (click)="emitQualitySticksEvent()">Quality Sticks</button>
 
                     <h2>Art</h2>
-                    <!-- <a href="https://www.reddit.com/r/Hyperion/comments/nz2hxz/i_made_hyperion_maps_equus_and_aquila/">Map of Hyperion</a> -->
                     <button (click)="emitMapEvent()">Hyperion Map</button>
 
+                    <h2>Unity</h2>
+                    <button (click)="emitUnityInventoryEvent()">Inventory System</button>
+
                     <h2>Github</h2>
-                    <a href="https://github.com/bryandanaher?tab=repositories">github.com/bryandanaher</a>
+                    <div class="link-inline">
+                        <a href="https://github.com/bryandanaher?tab=repositories" 
+                            target="_blank">github.com/bryandanaher</a>
+                        <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+                    </div>
                 </div>
             </div>
             <div [class]="projectIconContainer" (click)="toggleExpandProjects()">

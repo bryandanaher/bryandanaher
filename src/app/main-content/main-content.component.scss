@@ -36,11 +36,12 @@ app-landing {
     border-radius: 5px;
     display: none;
     justify-content: center;
+    overflow: hidden;
 }
 .close-icon-container {
     position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 2rem;
     height: fit-content;
 }
 .close-icon-container fa-icon {
@@ -52,8 +53,9 @@ app-landing {
 }
 .close-icon-container:hover {
     top: 0.9rem;
-    right: 0.9rem;
+    right: 1.9rem;
 }
 app-page-info {
     height: 100%;
+    width: 100%;
 }

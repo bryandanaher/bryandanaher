@@ -1,6 +1,23 @@
-<div class="page-info">
-    <h1>{{cardContent}}</h1>
-    <img src="">
-    <p *ngFor="let paragraph of paragraphs">{{paragraph}}</p>
-    <a href="{{linkToPage}}">Go to {{cardContent}}</a>
+<div class="page-info-bg-container">
+    <div class="page-info">
+        <h1>{{cardContent}}</h1>
+        <div class="image-container" *ngIf="imageName">
+            <a class="image-link" (click)="goToContent()" target="_blank">
+                <img src="{{ 'assets/images/' + imageName }}">
+            </a>
+        </div>
+        <p *ngFor="let paragraph of paragraphs">{{paragraph}}</p>
+        <div class="bottom-link" *ngIf="linkToPage">
+            <div class="link-inline">
+                <a  (click)="goToContent()" target="_blank">{{cardContent}}</a>
+                <fa-icon [icon]="faExternalLinkAlt"></fa-icon>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="{{modalStyle}}">
+    <div class="modal-background" (click)="toggleImageModal()"></div>
+    <div class="modal-image-container">
+        <img src="{{ 'assets/images/' + largeImageName }}" >
+    </div>
 </div>
